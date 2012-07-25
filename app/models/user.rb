@@ -3,10 +3,10 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
   validates :username,
     :presence => true,
-    :length => { :minimum => 4 }
+    :length   => { :minimum => 4 }
 
   validates :email,
-    :presence => true,
+    :presence   => true,
     :uniqueness => true,
-    :length => { :minimum => 4 }
+    :length     => { :minimum => 4 }
 end
