@@ -3,8 +3,8 @@ puts 'All Users destroyed!'
 
 30.times do |index|
   u = User.new
-  u.username = "User #{index}"
-  u.email    = "test#{index}@test.com"
+  u.username = Faker::Name.name
+  u.email    = Faker::Internet.free_email
   u.save!
 
   puts 'User saved!'
