@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @page.title
+%p
+  %b Description:
+  = @page.description
+%p
+  %b Raw description:
+  = @page.raw_description
+%p
+  %b Raw content:
+  = @page.raw_content
+%p
+  %b Content:
+  = @page.content
+
+= link_to 'Edit', edit_page_path(@page)
+\|
+= link_to 'Back', pages_path

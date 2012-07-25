@@ -1,4 +1,6 @@
 TheCms::Application.routes.draw do
+  resources :pages
+
   get "welcome/index"
 
   root :to => 'welcome#index'
