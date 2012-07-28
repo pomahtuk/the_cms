@@ -1,6 +1,8 @@
 class Page < ActiveRecord::Base
-  attr_accessible :title, :raw_content, :raw_description
+  acts_as_nested_set
+  include TheSortableTree::Scopes
 
+  attr_accessible :title, :raw_content, :raw_description
   before_save :prepare_content
 
   # VALIDATIONS

@@ -1,7 +1,12 @@
 TheCms::Application.routes.draw do
   root :to => 'pages#index'
 
-  resources :pages
+  resources :pages do
+    collection do
+      get :manage
+      post :rebuild
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

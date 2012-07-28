@@ -3,12 +3,14 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.6'
 
 gem 'mysql2'
+gem 'sorcery'
 
 gem 'haml'
 gem 'haml-rails'
 gem 'jquery-rails'
 
-gem 'sorcery'
+gem 'awesome_nested_set'
+gem 'the_sortable_tree'
 
 gem 'faker'
 

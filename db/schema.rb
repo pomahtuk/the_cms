@@ -20,6 +20,10 @@ ActiveRecord::Schema.define(:version => 20120725171729) do
     t.text     "raw_description"
     t.text     "raw_content"
     t.text     "content"
+    t.integer  "parent_id"
+    t.integer  "lft"
+    t.integer  "rgt"
+    t.integer  "depth"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end

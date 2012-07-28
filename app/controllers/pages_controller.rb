@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  include TheSortableTreeController::Rebuild
 
   before_filter :find_page, :only => [:show, :edit, :update, :destroy]
 
@@ -12,6 +13,10 @@ class PagesController < ApplicationController
 
   def new
     @page = Page.new
+  end
+
+  def manage
+    @pages = User.first.pages.nested_set.all
   end
 
   def create

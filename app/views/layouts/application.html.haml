@@ -5,6 +5,13 @@
   = stylesheet_link_tag    "application", :media => "all"
   = javascript_include_tag "application"
 
+  -# TheSortableTree
+  = stylesheet_link_tag    'tree', :media => :all
+
+  = javascript_include_tag 'jquery.ui.nestedSortable'
+  = javascript_include_tag 'sortable/base'
+  = stylesheet_link_tag    'sortable', :media => :all
+
 %body
   = yield
 
