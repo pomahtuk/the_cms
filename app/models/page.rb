@@ -15,7 +15,7 @@ class Page < ActiveRecord::Base
   private
 
   def prepare_content
-    self.description = "<p><b>#{self.raw_description}</b></p>"
-    self.content     = "<p>#{self.raw_content}</p>"
+    self.description = RedCloth.new(self.raw_description).to_html
+    self.content     = RedCloth.new(self.raw_content).to_html
   end
 end

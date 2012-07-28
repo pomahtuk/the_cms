@@ -1,16 +1,18 @@
-%p#notice= notice
+.pages
+  .show
+    %p#notice= notice
 
-%p
-  %H2 Title:
-  = @page.title
+    %p
+      %H2 Title:
+      = @page.title
 
-%p
-  %h2 Description:
-  = raw @page.description
-%p
-  %h2 Content:
-  = raw @page.content
+    %p
+      %h2 Description:
+      = raw @page.description
+    %p
+      %h2 Content:
+      = raw @page.content
 
-= link_to 'Edit', edit_page_path(@page)
-\|
-= link_to 'Back', pages_path
+    = link_to 'Edit', edit_page_path(@page)
+    \|
+    = link_to 'Back', pages_path

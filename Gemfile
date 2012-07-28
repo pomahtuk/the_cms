@@ -9,6 +9,10 @@ gem 'haml'
 gem 'haml-rails'
 gem 'jquery-rails'
 
+# text preprocessors
+gem 'RedCloth'
+gem 'sanitize'
+
 gem 'awesome_nested_set'
 gem 'the_sortable_tree'
 

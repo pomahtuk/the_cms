@@ -1,3 +1,25 @@
-// Place all the styles related to the pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'base/mix';
+
+.pages{
+  .edit{
+    label{
+      @include arial;
+      font-size: 1.3em;
+    }
+    input[type=text], textarea{
+      width: 500px;
+      font-size: 1.3em;
+      padding: 5px;
+    }
+    .submit{
+      padding: 5px;
+      font-size: 1.3em;
+    }
+  }
+  .show{
+    h2{
+      color: blue;
+    }
+  }
+}
+  
