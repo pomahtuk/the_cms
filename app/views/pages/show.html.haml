@@ -1,20 +1,15 @@
 %p#notice= notice
 
 %p
-  %b Title:
+  %H2 Title:
   = @page.title
+
 %p
-  %b Description:
-  = @page.description
+  %h2 Description:
+  = raw @page.description
 %p
-  %b Raw description:
-  = @page.raw_description
-%p
-  %b Raw content:
-  = @page.raw_content
-%p
-  %b Content:
-  = @page.content
+  %h2 Content:
+  = raw @page.content
 
 = link_to 'Edit', edit_page_path(@page)
 \|

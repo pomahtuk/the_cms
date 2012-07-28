@@ -6,7 +6,6 @@ class PagesController < ApplicationController
     @pages = Page.all
   end
 
-
   def show; end
 
   def edit; end
@@ -27,7 +26,7 @@ class PagesController < ApplicationController
 
   def update
     if @page.update_attributes params[:page]
-      redirect_to @page, notice: 'Page was successfully updated.'
+      redirect_to edit_page_path(@page), notice: 'Page was successfully updated.'
     else
       render action: "edit"
     end

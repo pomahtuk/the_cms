@@ -7,9 +7,13 @@ class Page < ActiveRecord::Base
   validates :title,       :presence => true
   validates :raw_content, :presence => true
 
+  # RELATIONS
+  belongs_to :user
+
   private
 
   def prepare_content
-    self.content = "<p>#{self.raw_content}</p>"
+    self.description = "<p><b>#{self.raw_description}</b></p>"
+    self.content     = "<p>#{self.raw_content}</p>"
   end
 end

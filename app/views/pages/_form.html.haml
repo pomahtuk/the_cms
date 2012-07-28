@@ -1,3 +1,5 @@
+%h3= flash[:notice]
+
 = form_for @page do |f|
   -if @page.errors.any?
     #error_explanation
@@ -7,19 +9,15 @@
           %li= msg
 
   .field
-    = f.label :title
-    = f.text_field :title
+    %p= f.label :title
+    %p= f.text_field :title
+
   .field
-    = f.label :description
-    = f.text_area :description
+    %p= f.label 'Description (Textile markup)'
+    %p= f.text_area :raw_description
   .field
-    = f.label :raw_description
-    = f.text_area :raw_description
-  .field
-    = f.label :raw_content
-    = f.text_area :raw_content
-  .field
-    = f.label :content
-    = f.text_area :content
+    %p= f.label 'Content (Textile markup)'
+    %p= f.text_area :raw_content
+
   .actions
     = f.submit 'Save'

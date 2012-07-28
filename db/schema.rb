@@ -14,6 +14,7 @@
 ActiveRecord::Schema.define(:version => 20120725171729) do
 
   create_table "pages", :force => true do |t|
+    t.integer  "user_id"
     t.string   "title"
     t.text     "description"
     t.text     "raw_description"
