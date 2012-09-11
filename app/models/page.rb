@@ -15,7 +15,19 @@ class Page < ActiveRecord::Base
   private
 
   def prepare_content
-    self.description = RedCloth.new(self.raw_description).to_html
-    self.content     = RedCloth.new(self.raw_content).to_html
+    # DESCRIPTION preparation
+    description = self.raw_description
+    description = Sanitize.clean(description, Sanitize::Config::USER)
+    # Your own preparator can be here
+    description = RedCloth.new(description).to_html
+    self.description = description
+    
+    # CONTENT preparation
+    content = self.raw_content
+    content = Sanitize.clean(content, Sanitize::Config::USER)
+    # Your own preparator can be here
+    content = RedCloth.new(content).to_html
+    self.content = content
+
   end
 end
