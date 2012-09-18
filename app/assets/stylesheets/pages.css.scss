@@ -1,6 +1,32 @@
 @import 'base/mix';
 
 .pages{
+  .index{
+    h1{
+      font-family: Arial;
+    }
+    table{
+      th{
+        text-align: left;
+        font-family: Arial;
+        font-size: 15px;
+        padding: 10px;
+        background: LightGray;
+        border-left: 1px solid gray;
+        border-bottom: 3px solid gray;
+      }
+      tr:nth-child(odd){
+        background: LightGray;
+      }
+      td{
+        border-right: 1px solid gray;
+        padding:5px;
+        font-size: 13px;
+        font-family: Arial;
+        line-height: 120%;
+      }
+    }
+  }
   .edit{
     label{
       @include arial;

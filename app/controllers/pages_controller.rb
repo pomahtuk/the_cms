@@ -4,7 +4,8 @@ class PagesController < ApplicationController
   before_filter :find_page, :only => [:show, :edit, :update, :destroy]
 
   def index
-    @pages = Page.all
+    @user = User.first
+    @pages = @user.pages.page(params[:page])
   end
 
   def show; end

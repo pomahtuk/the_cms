@@ -1,0 +1,7 @@
+ru:
+  pages:
+    index:
+      title: Заголовок
+      user: Пользователь
+      pages_listing: Редактирование страниц
+      controls: Управление

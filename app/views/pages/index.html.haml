@@ -1,23 +1,25 @@
-%h1 Listing pages
+.pages
+  .index
+    %h1= t '.pages_listing'
 
-%table
-  %tr
-    %th Title
-    %th User
+    %table
+      %tr
+        %th= t '.title'
+        %th= t '.user'
 
-    %th
-    %th
-    %th
+        %th{ colspan: 3 }= t '.controls'
 
-  - @pages.each do |page|
-    %tr
-      %td= page.title
-      %td= page.user.username
+      - @pages.each do |page|
+        %tr
+          %td= page.title
+          %td= @user.username
 
-      %td= link_to 'Show', page
-      %td= link_to 'Edit', edit_page_path(page)
-      %td= link_to 'Destroy', page, :confirm => 'Are you sure?', :method => :delete
+          %td= link_to 'Show', page
+          %td= link_to 'Edit', edit_page_path(page)
+          %td= link_to 'Destroy', page, data: { confirm: 'Are you sure?' }, :method => :delete
 
-%br
+    %br
 
-= link_to 'New Page', new_page_path
+    %p= paginate @pages
+
+    = link_to 'New Page', new_page_path
